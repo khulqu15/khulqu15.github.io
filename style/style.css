@@ -1,0 +1,173 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #1F2741;
+    color: white;
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+.dark {
+    background-color: #1F2741 !important;
+}
+
+.nunito {
+    font-family: 'Nunito', sans-serif;
+    display: inline-block;
+}
+
+#parallax-home {
+    height: 400px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    border-bottom-right-radius: 100px;
+    background: linear-gradient(90deg, rgba(14, 153, 232, 1) 0%, rgba(109, 43, 250, 1) 100%); 
+}
+
+#parallax-home img.parallax-home {
+    opacity: .5;
+    position: absolute;
+    border-bottom-right-radius: 100px;
+}
+
+.object-fit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.absolute-profile {
+    position: relative;
+    top: 340px;
+}
+.absolute-profile:nth-child(2) {
+    position: relative;
+    top: 300px;
+}
+
+.avatar-profile {
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 16px;
+    position: relative;
+}
+
+.btn-dark {
+    border-radius: 12px;
+    background-color: #262e4b;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+.btn-dark:hover {
+    background-color: #384583;
+}
+.card-dark {
+    background: rgba(50, 66, 119, 0.7);
+    backdrop-filter: blur(50px);
+    border-radius: 16px;
+}
+
+#introduce .image {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+img#gradient {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    bottom: -20px;
+    right: -20px;
+}
+
+#experience {
+    background-image: url('../img/experiences.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.skill .size {
+    width: 70%;
+    height: 7px;
+    position: relative;
+    left: 10%;
+    border-radius: 7px;
+    background-color: #b7c4f2;
+}
+
+.size .fill {
+    position: absolute;
+    left: 0;
+    border-radius: 7px;
+    bottom: 0;
+    z-index: 10;
+    height: 7px;
+    top: 0;
+}
+
+#html { background-color: #FF5722; width: 95%; }
+#css { background-color: #0E99E8; width: 90%; }
+#js { background-color: #F0DB4F; width: 80%; }
+#vue { background-color: #41B883; width: 75%; }
+#laravel { background-color: #F66161; width: 94%; }
+#bootstrap { background-color: #A074FF; width: 85%; }
+#php { background-color: #405FF2; width: 80%; }
+#flutter { background-color: #0E99E8; width: 65%; }
+#java { background-color: #E76F00; width: 70%; }
+#kotlin { background-color: #4384D9; width: 65%; }
+#firebase { background-color: #F4D400; width: 45%; }
+#django { background-color: #092E20; width: 35%; }
+#mysql { background-color: #5382A1; width: 80%; }
+#sqlserver { background-color: #5382A1; width: 65%; }
+#postgre { background-color: #5382A1; width: 50%; }
+
+.overlay-gradient-to-opacity {
+    width: 100%;
+    position: absolute;
+    height: 400px !important;
+    left: 0;
+    top: 0;
+    height: 100px;
+    background: linear-gradient(180deg, #1F2741 0%, rgba(31, 39, 65, 0) 100%);
+}
+.overlay-gradient {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    opacity: .4;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(14, 153, 232, 1) 0%, rgba(109, 43, 250, 1) 100%); 
+}
+.bg-glass {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+@media screen and (max-width: 760px) {
+    .object-fit {
+        position: relative;
+    }
+    .avatar-profile {
+        width: 100px;
+        height: 100px;
+        top: 0 !important;
+        overflow: hidden;
+        border-radius: 16px;
+        position: relative !important;
+    }
+    .absolute-profile {
+        width: 100%;
+        top: 180px !important;
+        position: relative !important;
+        text-align: center !important;
+    }
+}
