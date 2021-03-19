@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: #1F2741;
+    scroll-behavior: smooth;
     color: white;
     width: 100%;
     overflow-x: hidden !important;
@@ -22,6 +23,78 @@ body, html {
     position: relative;
     border-bottom-right-radius: 100px;
     background: linear-gradient(90deg, rgba(14, 153, 232, 1) 0%, rgba(109, 43, 250, 1) 100%); 
+}
+
+#parralax-home {
+    transition: all .3s ease-in-out;
+}
+
+.opacity-5 {
+    opacity: .5 !important;
+}
+
+.cerificate {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden !important;
+    transition: all .3s ease-in-out !important;
+    position: relative;
+    cursor: pointer;
+    height: 250px;
+    background-color: #405FF2;
+    transform: scale(1);
+}
+.cerificate img {
+    transition: all .3s ease-in-out;
+}
+.cerificate:hover img {
+    opacity: .5;
+}
+.slick-dots {
+    position: relative;
+    top: 10px;
+}
+.slick-dots li button {
+    width: 10px;
+    border-radius: 10px;
+    border: none;
+    height: 10px;
+    transition: all .3s ease-in-out;
+    background-color: #384583;
+    transform: scale(1);
+}
+.slick-dots li button::before {
+    display: none;
+}
+.slick-dots li.slick-active button {
+    transform: scale(1.2) !important;
+    background-color: #405FF2;
+}
+.cerificate::after {
+    content: '';
+    position: absolute;
+    height: 120%;
+    left: -40%;
+    transform: skew(-15deg);
+    background-color: white;
+    width: 60px;
+    transition: all .5s ease-in-out;
+    transition-delay: .3s;
+    filter: blur(50px);
+}
+.cerificate:hover::after {
+    content: '';
+    left: 120% !important;
+}
+
+.slick-center.slick-current {
+    transition: all .3s ease-in-out !important;
+    transform: scale(1);
+}
+
+.slick-slide {
+    transition: all .3s ease-in-out !important;
+    transform: scale(.6);
 }
 
 #parallax-home img.parallax-home {
@@ -60,9 +133,12 @@ body, html {
     border-radius: 12px;
     background-color: #262e4b;
     border: none;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out !important;
 }
 .btn-dark:hover {
+    background-color: #384583;
+}
+.btn-dark:active {
     background-color: #384583;
 }
 .card-dark {
@@ -134,9 +210,102 @@ img#gradient {
     height: 400px !important;
     left: 0;
     top: 0;
-    height: 100px;
     background: linear-gradient(180deg, #1F2741 0%, rgba(31, 39, 65, 0) 100%);
 }
+.overlay-gradient-to-opacity-top {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0 !important;
+    height: 100%;
+    background: linear-gradient(to top, rgba(31,39,65, 1), rgba(0,0,0,0));
+}
+
+.body-hidden {
+    display: inline-block;
+    position: relative;
+    overflow: hidden !important;
+    height: 98vh;
+}
+
+footer {
+    overflow: hidden !important;
+}
+
+.menu-full-page {
+    position: fixed;
+    z-index: 150;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(31,39,65, .5);
+    backdrop-filter: blur(20px);
+    opacity: 1;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    visibility: visible;
+    transition: all .7s ease-in-out;
+    transform: skew(0deg);
+}
+.hidden-menu {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    right: -100% !important;
+    transform: skew(10deg) !important;
+}
+
+.toggleable-navbar {
+    width: 140px;
+    text-align: center;
+    line-height: 65px;
+    height: 70px;
+    z-index: 200;
+    cursor: pointer;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-image: url('../img/gradient.png');
+    background-position: center;
+    position: fixed;
+    right: -1px;
+    top: 0;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #0E99E8;
+    transition: all .3s ease-in-out;
+}
+
+.cirlce-round {
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    bottom: -8px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.cirlce-round img {
+    animation-name: imgMuter;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imgMuter {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .overlay-gradient {
     top: 0;
     position: absolute;
@@ -151,6 +320,92 @@ img#gradient {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     backdrop-filter: blur(10px);
+}
+.bg-glass-white {
+    width: 100%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-family: nunito;
+    transition: all .3s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+.bg-glass-white:hover {
+    backdrop-filter: blur(50px);
+    color: rgba(31,39,65, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.icons-socials {
+    transition: all .3s ease-in-out;
+}
+.set-navbar {
+    width: 100%;
+    position: fixed !important;
+    top: 0 !important;
+    opacity: 1 !important;
+    height: 70px !important;
+    z-index: 100 !important;
+}
+#my-name {
+    transition: all .3s ease-in-out;
+}
+.set-top-name {
+    position: fixed !important;
+    top: 0px !important;
+    left: 20px !important;
+}
+.set-top-name h3 {
+    font-size: 1rem !important;
+    position: relative;
+    top: 10px;
+}
+#role, #my-role {
+    transition: all .3s ease-in-out;
+}
+.set-top-role {
+    position: fixed !important;
+    top: 30px !important;
+    left: 20px !important;
+}
+.set-top-role p {
+    font-size: .9rem;
+}
+#profile-avatar {
+    transition: all .3s ease-in-out;
+    left: 0;
+}
+.hidden-component {
+    position: absolute !important;
+    left: -100px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+.component-hidden {
+    position: absolute !important;
+    right: -100px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.card-team {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(14, 153, 232, 1) 0%, rgba(109, 43, 250, 1) 100%); 
+    height: 250px;
+    cursor: pointer;
+}
+.card-team img {
+    transition: all .3s ease-in-out;
+    transform: scale(1);
+}
+.card-team:hover img {
+    opacity: .6;
+    transform: scale(1.1);
+}
+.card-team#me {
+    z-index: 50;
+    height: 500px !important;
 }
 @media screen and (max-width: 760px) {
     .object-fit {

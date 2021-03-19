@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">    
 
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+
     <link rel="stylesheet" href="style/aos.css">
     <link rel="stylesheet" href="style/all.min.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
@@ -21,6 +23,7 @@
     <link rel="stylesheet" href="style/style.css">
 
     <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="script/popper.min.js"></script>
     <script src="script/aos.js"></script>
     <script src="script/all.min.js"></script>
     <script src="script/bootstrap.min.js"></script>
@@ -29,43 +32,43 @@
     <script src="script/slick.min.js"></script>
     <script src="script/vue.min.js"></script>
 </head>
-<body class="dark">
+<body id="body-page" class="dark">
 
     <div style="height: 80vh !important">
         <div class="container-fluid px-0" id="parallax-home">
-            <img src="img/parralax-home.jpg" class="parallax-home object-fit" alt="Home">
+            <img src="img/parralax-home.jpg" id="img-parallax-home" class="parallax-home object-fit" alt="Home">
             <div class="container">
                 <div class="row">
                     <div class="col-md-2">
                         <div data-aos="fade-right" data-aos-delay="100" class="absolute-profile">
-                            <div class="avatar-profile">
+                            <div id="profile-avatar" class="avatar-profile">
                                 <img src="img/profile.png" class="object-fit" alt="Profile">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-10">
                         <div class="absolute-profile pt-2">
-                            <div data-aos="fade-right">
-                                <h3 class="nunito mt-2 mb-md-4 mb-1 font-weight-bold">Mohammad Khusnul Khuluq</h3>
+                            <div data-aos="fade-right" id="name">
+                                <h3 class="nunito mt-2 mb-md-4 mb-1 font-weight-bold d-inline-block w-100" id="my-name">Mohammad Khusnul Khuluq</h3>
                             </div>
-                            <div data-aos="fade-right">
-                                <p class="nunito mb-0">Full Stack Developer</p>
+                            <div data-aos="fade-right" id="role">
+                                <p class="nunito mb-0" id="my-role">Full Stack Developer</p>
                             </div>
                         </div>
-                        <div class="absolute-profile text-right w-100 py-2 mt-md-0 mt-5">
-                            <button data-aos="fade-left" class="btn btn-dark px-3 py-2">
+                        <div class="absolute-profile text-right w-100 py-2 mt-md-0 mt-5" id="icons-socials">
+                            <button onclick="window.open('https://web.facebook.com/NulShit83/', '_blank')" data-aos="fade-left" class="btn btn-dark px-3 py-2">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button data-aos="fade-left" data-aos-delay="100" class="btn btn-dark px-3 py-2">
+                            <button onclick="window.open('https://www.instagram.com/sidescript_dev/', '_blank')" data-aos="fade-left" data-aos-delay="100" class="btn btn-dark px-3 py-2">
                                 <i class="fab fa-instagram"></i>
                             </button>
-                            <button data-aos="fade-left" data-aos-delay="200" class="btn btn-dark px-3 py-2">
+                            <button onclick="window.open('https://dribbble.com/uixrpl', '_blank')" data-aos="fade-left" data-aos-delay="200" class="btn btn-dark px-3 py-2">
                                 <i class="fab fa-dribbble"></i>
                             </button>
-                            <button data-aos="fade-left" data-aos-delay="300" class="btn btn-dark px-3 py-2">
+                            <button onclick="window.open('https://www.linkedin.com/in/mohammad-khusnul-khuluq-53b2051b5/', '_blank')" data-aos="fade-left" data-aos-delay="300" class="btn btn-dark px-3 py-2">
                                 <i class="fab fa-linkedin"></i>
                             </button>
-                            <button data-aos="fade-left" data-aos-delay="400" class="btn btn-dark px-3 py-2">
+                            <button onclick="window.open('https://github.com/khulqu15', '_blank')" data-aos="fade-left" data-aos-delay="400" class="btn btn-dark px-3 py-2">
                                 <i class="fab fa-github"></i>
                             </button>
                         </div>
@@ -75,6 +78,10 @@
         </div>
     </div>
     
+    <div class="toggleable-navbar">
+        <i id="icon-toggle" class="text-dark fas fa-stream"></i>
+    </div>
+
     <!-- Introduce -->
     <div class="container-fluid mt-md-0 mt-4 pt-md-0 mb-5 pb-5 position-relative" id="introduce">
         <div data-aos="zoom-in-right" class="container mt-md-0 mt-5 pt-md-0 position-relative">
@@ -87,7 +94,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 py-md-4 py-0 px-4">
-                        <h3 data-aos="fade-left" class="nunito mb-4 mt-md-0 mt-4 font-weight-bold">Introduction</h3>
+                        <h3 data-aos="fade-left" class="nunito mb-4 mt-md-0 mt-4 font-weight-bold">introduce</h3>
                         <div data-aos="fade-left" class="mr-md-5 mr-3">
                             <p class="mb-0">My name is Khuluq, but people call me ‘Ninno’, I’am born in Pasuruan ,30 March 2020 and I’am third year software engineer in 01 Purwosari indutrial school, I’am fullstack developer, I can make web and app in any language programming, I’m love python and kotlin, It’s simplicity of programming.</p>
                         </div>
@@ -101,7 +108,7 @@
     <div class="container-fluid px-0 pb-5 overflow-hidden position-relative" id="experience">
         <div class="overlay-gradient"></div>
         <div class="overlay-gradient-to-opacity"></div>
-        <div class="title py-5 text-center position-relative">
+        <div class="title py-5 text-center position-relative" id="experiences">
             <h4 data-aos="fade-down">Experiences</h4>
         </div>
         <div class="container py-3 position-relative">
@@ -168,7 +175,7 @@
             </div>
         </div>
 
-        <div class="title py-5 text-center position-relative">
+        <div class="title py-5 text-center position-relative" id="education">
             <h4 data-aos="fade-down">Education</h4>
         </div>
         <div class="container py-3 pb-5 position-relative">
@@ -215,14 +222,15 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid position-relative" id="skill">
+        <img src="img/gradient.png" class="position-absolute" width="400px" style="top: 10%; left: -10%;" alt="Gradient">
         <div class="container card-dark position-relative pt-5 px-5 pb-3" style="top: -50px;">
             <div class="row">
                 <div class="col-md-12 px-0">
                     <h3 class="nunito font-weight-bold">Current Skill</h3>
                     <div class="row">
                         <div class="col-md-4">
-                            <div data-aos="fade-right" class="skill d-block py-3">
+                            <div data-toggle="tooltip" data-placement="top" tabindex="0" title="HTML : 95%" data-aos="fade-right" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/html.png" class="10px" alt="Html">
                                 </div>
@@ -230,7 +238,7 @@
                                     <div class="fill" id="html"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="50" class="skill d-block py-3">
+                            <div data-toggle="tooltip" data-placement="top" tabindex="0" title="CSS : 90%" data-aos="fade-right" data-aos-delay="50" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/css.png" class="10px" alt="Html">
                                 </div>
@@ -238,7 +246,7 @@
                                     <div class="fill" id="css"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="100" class="skill d-block py-3">
+                            <div data-toggle="tooltip" data-placement="top" tabindex="0" title="JavaScript : 80%" data-aos="fade-right" data-aos-delay="100" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/js.png" class="10px" alt="Html">
                                 </div>
@@ -246,7 +254,7 @@
                                     <div class="fill" id="js"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="150" class="skill d-block py-3">
+                            <div data-toggle="tooltip" data-placement="top" tabindex="0" title="Vuejs : 75%" data-aos="fade-right" data-aos-delay="150" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/vue.png" class="10px" alt="Html">
                                 </div>
@@ -254,7 +262,7 @@
                                     <div class="fill" id="vue"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="200" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="Laravel : 95%" data-aos-delay="200" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/laravel.png" class="10px" alt="Html">
                                 </div>
@@ -264,7 +272,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div data-aos="fade-right" data-aos-delay="200" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="Bootstrap : 85%" data-aos-delay="200" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/bootstrap.png" class="10px" alt="Html">
                                 </div>
@@ -272,7 +280,7 @@
                                     <div class="fill" id="bootstrap"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="250" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="Php : 80%" data-aos-delay="250" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/php.png" class="10px" alt="Html">
                                 </div>
@@ -280,7 +288,7 @@
                                     <div class="fill" id="php"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="300" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="Flutter : 65%" data-aos-delay="300" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/flutter.png" class="10px" alt="Html">
                                 </div>
@@ -288,7 +296,7 @@
                                     <div class="fill" id="flutter"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="350" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="Java : 70%" data-aos-delay="350" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/java.png" class="10px" alt="Html">
                                 </div>
@@ -296,7 +304,7 @@
                                     <div class="fill" id="java"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="400" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="Kotlin : 65%" data-aos-delay="400" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/kotlin.png" class="10px" alt="Html">
                                 </div>
@@ -306,7 +314,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div data-aos="fade-right" data-aos-delay="400" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="Firebase : 45%" data-aos-delay="400" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/firebase.png" class="10px" alt="Html">
                                 </div>
@@ -314,7 +322,7 @@
                                     <div class="fill" id="firebase"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="450" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="Django : 35%" data-aos-delay="450" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/django.png" class="10px" alt="Html">
                                 </div>
@@ -322,7 +330,7 @@
                                     <div class="fill" id="django"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="500" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="MySQL : 80%" data-aos-delay="500" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/mysql.png" class="10px" alt="Html">
                                 </div>
@@ -330,7 +338,7 @@
                                     <div class="fill" id="mysql"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="550" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="SQL Server : 65%" data-aos-delay="550" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/sqlserver.png" class="10px" alt="Html">
                                 </div>
@@ -338,7 +346,7 @@
                                     <div class="fill" id="sqlserver"></div>
                                 </div>
                             </div>
-                            <div data-aos="fade-right" data-aos-delay="600" class="skill d-block py-3">
+                            <div data-aos="fade-right" data-toggle="tooltip" data-placement="top" tabindex="0" title="PostgreSQL : 50%" data-aos-delay="600" class="skill d-block py-3">
                                 <div class="icon d-inline-block">
                                     <img src="img/icon/postsgre.png" class="10px" alt="Html">
                                 </div>
@@ -353,7 +361,286 @@
         </div>
     </div>
 
+    <div class="container-fluid pb-5 pt-3" id="achievement">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 py-md-5 py-2">
+                    <div data-aos="fade-right">
+                        <h3 class="nunito mb-4 font-weight-bold">Achievement</h3>
+                    </div>
+                    <p data-aos="fade-right" data-aos-delay="100" class="nunito">I've hard work and smart work to get these Achievement, We're just need a movement to got an achievement</p>
+                </div>
+                <div class="col-md-8">
+                    <div class="certificates" id="certificates" data-aos="fade-left">
+                        <div class="cerificate" data-image="img/sertif/invfest.jpg">
+                            <img class="object-fit" src="img/sertif/invfest.jpg" alt="">
+                        </div>
+                        <div class="cerificate" data-image="img/sertif/lkswilker.jpg">
+                            <img class="object-fit" src="img/sertif/lkswilker.jpg" alt="">
+                        </div>
+                        <div class="cerificate" data-image="img/sertif/lkswilker2.png">
+                            <img class="object-fit" src="img/sertif/lkswilker2.png" alt="">
+                        </div>
+                        <div class="cerificate" data-image="img/sertif/maspion.jpg">
+                            <img class="object-fit" src="img/sertif/maspion.jpg" alt="">
+                        </div>
+                        <div class="cerificate" data-image="img/sertif/smkcoding.jpg">
+                            <img class="object-fit" src="img/sertif/smkcoding.jpg" alt="">
+                        </div>
+                        <div class="cerificate" data-image="img/sertif/stiki.jpg">
+                            <img class="object-fit" src="img/sertif/stiki.jpg" alt="">
+                        </div>
+                        <div class="cerificate" data-image="img/sertif/trilogi.jpg">
+                            <img class="object-fit" src="img/sertif/trilogi.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content card-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title">Preview Image</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <img id="img-modal" src="" class="w-100" alt="Image Modal">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid card-dark pt-4 px-0" id="team">
+        <div class="container my-3">
+            <h3 class="nunito mb-2 font-weight-bold">SideScript Developer</h3>
+            <div>
+                <p class="nunito">Creative Team</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 px-1">
+                <div onclick='window.open("https://www.instagram.com/khulqu_/", "_blank")' class="card-team position-relative" id="me">
+                    <img src="img/team/aku.png" class="object-fit" alt="Aku">
+                    <div class="overlay-gradient-to-opacity-top"></div>
+                    <div class="position-absolute p-4" style="bottom: 0">
+                        <div>
+                            <h5 class="nunito mb-0 font-weight-bold">Mohammad Khusnul Khuluq (Ninno)</h5>
+                        </div>
+                        <p class="nunito mb-0">Full stack developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 px-1">
+                <div class="row">
+                    <div class="col-sm-6 px-0">
+                        <div onclick='window.open("https://www.instagram.com/rhnalms_/", "_blank")' class="card-team position-relative">
+                            <img src="img/team/rehan.png" class="object-fit" alt="Aku">
+                            <div class="overlay-gradient-to-opacity-top"></div>
+                            <div class="position-absolute p-4" style="bottom: 0">
+                                <div>
+                                    <h5 class="nunito mb-0 font-weight-bold">Reihan Almas Hediawan</h5>
+                                </div>
+                                <p class="nunito mb-0">Mobile developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 px-0">
+                        <div onclick='window.open("https://www.instagram.com/febribrilia/", "_blank")' class="card-team position-relative">
+                            <img src="img/team/febri1.png" class="object-fit" alt="Aku">
+                            <div class="overlay-gradient-to-opacity-top"></div>
+                            <div class="position-absolute p-4" style="bottom: 0">
+                                <div>
+                                    <h5 class="nunito mb-0 font-weight-bold">Febri Brilian Barkah</h5>
+                                </div>
+                                <p class="nunito mb-0">Backend developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 px-0">
+                        <div onclick='window.open("https://www.instagram.com/_.ilhamie/", "_blank")' class="card-team position-relative">
+                            <img src="img/team/ilham.png" class="object-fit" alt="Aku">
+                            <div class="overlay-gradient-to-opacity-top"></div>
+                            <div class="position-absolute p-4" style="bottom: 0">
+                                <div>
+                                    <h5 class="nunito mb-0 font-weight-bold">Ilham Magfiro</h5>
+                                </div>
+                                <p class="nunito mb-0">Web developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 px-0">
+                        <div onclick='window.open("https://www.instagram.com/madamarsha/", "_blank")' class="card-team position-relative">
+                            <img src="img/team/mada.png" class="object-fit" alt="Aku">
+                            <div class="overlay-gradient-to-opacity-top"></div>
+                            <div class="position-absolute p-4" style="bottom: 0">
+                                <div>
+                                    <h5 class="nunito mb-0 font-weight-bold">Ade Mada Marshanda</h5>
+                                </div>
+                                <p class="nunito mb-0">General Admin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 px-0">
+                        <div onclick='window.open("https://www.instagram.com/fennekicy/", "_blank")' class="card-team position-relative">
+                            <img src="img/team/deva.png" class="object-fit" alt="Aku">
+                            <div class="overlay-gradient-to-opacity-top"></div>
+                            <div class="position-absolute p-4" style="bottom: 0">
+                                <div>
+                                    <h5 class="nunito mb-0 font-weight-bold">Desvina Deva Lucya</h5>
+                                </div>
+                                <p class="nunito mb-0">Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toTop hidden-component" onclick="window.location.href = '#'">
+        <h5 class="d-inline-block">
+            <i class="fas fa-angle-up"></i>
+        </h5>
+    </div>
+
+    <footer class="container-fluid pt-5">
+        <div class="container pt-4">
+            <div class="col-md-8 text-center offset-md-2">
+                <h5 class="nunito">Designed By Ninno SideScript</h5>
+                <div>
+                    <div class="cirlce-round">
+                        <img src="img/gradient.png" class="w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="menu-full-page hidden-menu">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="nunito font-weight-bold">Menu</h1>
+                    <div class="row">
+                        <div onclick="moveContent('#')" class="col-lg-3 col-md-4 rounded-0 my-2 col-sm-6">
+                            <div class="bg-glass-white p-4">
+                                <h4>Home</h4>
+                            </div>
+                        </div>
+                        <div onclick="moveContent('#introduce')" class="col-lg-3 col-md-4 rounded-0 my-2 col-sm-6">
+                            <div class="bg-glass-white p-4">
+                                <h4>introduce</h4>
+                            </div>
+                        </div>
+                        <div onclick="moveContent('#experience')" class="col-lg-3 col-md-4 rounded-0 my-2 col-sm-6">
+                            <div class="bg-glass-white p-4">
+                                <h4>Experiences</h4>
+                            </div>
+                        </div>
+                        <div onclick="moveContent('#education')" class="col-lg-3 col-md-4 rounded-0 my-2 col-sm-6">
+                            <div class="bg-glass-white p-4">
+                                <h4>Educations</h4>
+                            </div>
+                        </div>
+                        <div onclick="moveContent('#skill')" class="col-lg-3 col-md-4 rounded-0 my-2 col-sm-6">
+                            <div class="bg-glass-white p-4">
+                                <h4>Skill</h4>
+                            </div>
+                        </div>
+                        <div onclick="moveContent('#achievement')" class="col-lg-3 col-md-4 rounded-0 my-2 col-sm-6">
+                            <div class="bg-glass-white p-4">
+                                <h4>Achievement</h4>
+                            </div>
+                        </div>
+                        <div onclick="moveContent('#team')" class="col-lg-3 col-md-4 rounded-0 my-2 col-sm-6">
+                            <div class="bg-glass-white p-4">
+                                <h4>Teams</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        function moveContent(contentId) {
+            $('.menu-full-page').addClass('hidden-menu')
+            $('#body-page').removeClass('body-hidden')
+            setTimeout(function() {
+                window.location.href = contentId
+            }, 400)
+        }
+        $('.cerificate').click(function() {
+            const imgModal = $(this).data('image')
+            console.log(imgModal)
+            $('#img-modal').attr('src', imgModal)
+            $('#myModal').modal()
+        })
+        $('.toggleable-navbar').click(function() {
+            $('#icon-toggle').toggleClass('fa-stream fa-times')
+            if($('#icon-toggle').hasClass('fa-times')) {
+                $('.menu-full-page').removeClass('hidden-menu')
+                $('#body-page').addClass('body-hidden')
+            } else {
+                $('.menu-full-page').addClass('hidden-menu')
+                $('#body-page').removeClass('body-hidden')
+            }
+        })
+        $('#certificates').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            swipeToSlide: true,
+            arrow: true,
+            dots: true,
+            autoplay: true,
+            centerMode: true,
+            infinite: false,
+            autoplaySpeed: 6000,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        })
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        $(window).scroll(function() {
+            var top = $(this).scrollTop()
+            if(top > 320) {
+                $('#parallax-home').addClass('set-navbar')
+                $('#img-parallax-home').addClass('animate__animated animate__fadeOut d-none').removeClass('animate__fadeIn')
+                $('#profile-avatar').addClass('animate__animated animate__bounceOutLeft').removeClass('animate__bounceInRight')
+                $('#my-name').text('Ninno')
+                $('#name').addClass('set-top-name')
+                $('#role').addClass('set-top-role')
+                $('.toTop').removeClass('hidden-component')
+                $('#icons-socials').addClass('component-hidden')
+            } else {
+                $('#parallax-home').removeClass('set-navbar')
+                $('#img-parallax-home').addClass('animate__animated animate__fadeIn opacity-5').removeClass('animate__fadeOut d-none')
+                $('#profile-avatar').addClass('animate__animated animate__bounceInRight').removeClass('animate__bounceOutLeft')
+                $('#name').removeClass('set-top-name')
+                $('#role').removeClass('set-top-role')
+                $('.toTop').addClass('hidden-component')
+                $('#my-name').text('Mohammad Khusnul Khuluq')
+                $('#icons-socials').removeClass('component-hidden')
+            }
+            
+        })
         AOS.init()
     </script>
 
