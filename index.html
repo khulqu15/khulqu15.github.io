@@ -601,6 +601,7 @@
         function moveContent(contentId) {
             $('.menu-full-page').addClass('hidden-menu')
             $('#body-page').removeClass('body-hidden')
+            $('#icon-toggle').toggleClass('fa-stream fa-times')
             setTimeout(function() {
                 window.location.href = contentId
             }, 400)
