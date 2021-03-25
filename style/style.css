@@ -335,6 +335,18 @@ footer {
     transition: all .3s ease-in-out;
     backdrop-filter: blur(10px);
 }
+.btn-gradient-primary {
+    background: linear-gradient(-90deg, rgb(6, 120, 186) 0%, rgb(96, 36, 225) 100%); 
+    border-radius: 16px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    border: none !important;
+    font-weight: bold;
+    transition: all .3s ease-in-out !important;
+}
+.btn-gradient-primary:hover {
+    background: linear-gradient(-90deg, rgb(4, 100, 155) 0%, rgb(79, 25, 196) 100%); 
+}
 .bg-glass-white:hover {
     backdrop-filter: blur(50px);
     color: rgba(31,39,65, 1);
